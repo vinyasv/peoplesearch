@@ -1,0 +1,22 @@
+[project]
+name = "people-research"
+version = "0.1.0"
+description = "Exa people search + per-criterion agentic verification with Claude"
+requires-python = ">=3.12"
+dependencies = [
+    "anthropic>=1.13.0",
+    "exa-py>=2.25.0",
+    "fastapi>=0.143.0",
+    "pydantic>=2.14.1",
+    "python-dotenv>=1.2.4",
+    "rich>=15.0.0",
+    "uvicorn>=0.54.0",
+]
+
+[project.scripts]
+people-research = "people_research.cli:main"
+people-research-web = "people_research.server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
